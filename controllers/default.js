@@ -20,7 +20,7 @@ function users() {
 function users1() {
 	var self = this;
 	var users = DATABASE('users');
-	users.find({}).limit(10).toArray(function (err, docs) {
+	users.find({}).toArray(function (err, docs) {
 		self.json(docs);
 	});
 }
