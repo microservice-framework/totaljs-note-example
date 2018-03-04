@@ -3,11 +3,11 @@ var DB = null;
 
 F.wait('database');
 
-MC.connect(CONFIG('database'), function (err, db) {
+MC.connect(CONFIG('mongodb'), function (err, db) {
     if (err) throw err;
     DB = db.db('totaljsapi');
     F.wait('database');
-
+    
 });
 
 F.database = function (collection) {
